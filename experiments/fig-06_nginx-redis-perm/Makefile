@@ -167,7 +167,7 @@ $$(.DOCKER_PROXY)plot-app-$(1):
 		$$(RESULTSDIR)/$(1).csv \
 		$$(WORKDIR)/$$(notdir $$(WORKDIR))-$(1).$$(PLOT_FORMAT)
 
-# Probide a target to clean up the experiment
+# Provide a target to clean up the experiment
 .PHONY: properclean-wayfinder-app-$(1)
 properclean: properclean-wayfinder-app-$(1)
 properclean-wayfinder-app-$(1):
@@ -214,4 +214,4 @@ clean:
 
 .PHONY: properclean
 properclean:
-	$(RM) -f $(TMPDIR)
+	$(RM) -r $(TMPDIR)
